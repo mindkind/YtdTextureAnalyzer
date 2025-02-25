@@ -40,6 +40,14 @@ YtdTextureAnalyzer <ytd_file> [--fix-script-rt]
 --fix-script-rt     Fix script_rt textures by converting them to A8R8G8B8 format with 1 mipmap
 ```
 
+### Why Use `--fix-script-rt`?
+Using the `--fix-script-rt` option corrects improperly processed `script_rt` textures. This can help prevent warnings and performance issues like:
+
+```
+[   5097609] [b2699_GTAProce] ResourcePlacementThr/ ^3Warning: Texture script_rt_dials_race (in txd alEMSalamo.ytd) was set to a compressed texture format, but 'script_rt' textures should always be uncompressed.
+[   5097609] [b2699_GTAProce] ResourcePlacementThr/ This file was likely processed by a bad tool. To improve load performance and reduce the risk of it crashing, fix or update the tool used.^7
+```
+
 ### Example
 To analyze a YTD file:
 ```sh
